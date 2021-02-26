@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:learn_flutter_week_three/gallery.dart';
-import 'package:learn_flutter_week_three/signin.dart';
-import 'package:learn_flutter_week_three/signup.dart';
+import 'package:kadang_sapi_flutter/detail.dart';
+import 'package:kadang_sapi_flutter/dictdetail.dart';
+import 'package:kadang_sapi_flutter/dictionaries.dart';
+import 'package:kadang_sapi_flutter/gallery.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,7 +20,11 @@ class MyApp extends StatelessWidget {
       ),
       // home: SignInPage()
       // home: SignUpPage(),
-      home: GalleryPage(),
+      // home: GalleryPage(),
+      // home: DetailPage(),
+      home: DictionaryPage(),
+      // home: DictionaryDetailPage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
