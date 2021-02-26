@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:kadang_sapi_flutter/R.dart';
+import 'package:kadang_sapi_flutter/drawer.dart';
 import 'package:kadang_sapi_flutter/newsdetail.dart';
 
 class NewsPage extends StatelessWidget {
@@ -8,6 +9,7 @@ class NewsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
+      drawer: DrawerComponent(),
       appBar: AppBar(
         shadowColor: Colors.transparent,
         title: Text("Berita"),

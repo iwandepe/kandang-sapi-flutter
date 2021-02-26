@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 
 import 'package:kadang_sapi_flutter/R.dart';
 import 'package:kadang_sapi_flutter/detail.dart';
+import 'package:kadang_sapi_flutter/drawer.dart';
 
 class GalleryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
+      drawer: DrawerComponent(),
       appBar: AppBar(title: Text('Cow Gallery')),
       body: GridView.count(
         crossAxisCount: 2,

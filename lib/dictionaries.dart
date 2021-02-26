@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:kadang_sapi_flutter/dictdetail.dart';
 import 'package:kadang_sapi_flutter/R.dart';
+import 'package:kadang_sapi_flutter/drawer.dart';
 
 class DictionaryPage extends StatelessWidget {
   List<String> items = List<String>.generate(20, (index) => 'Item $index');
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Color(0xFFFEFEFE),
       backgroundColor: Theme.of(context).accentColor,
+      drawer: DrawerComponent(),
       appBar: AppBar(
         shadowColor: Colors.transparent,
         backgroundColor: Theme.of(context).primaryColor,
@@ -86,9 +87,10 @@ class DictionaryPage extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => DictionaryDetailPage(
-                                  id: index,
-                                )),
+                          builder: (context) => DictionaryDetailPage(
+                            id: index,
+                          ),
+                        ),
                       );
                     },
                   ),

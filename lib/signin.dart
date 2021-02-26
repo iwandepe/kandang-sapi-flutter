@@ -129,6 +129,9 @@ class SignInPage extends StatelessWidget {
                           style:
                               TextStyle(color: Theme.of(context).buttonColor),
                         ),
+                        onTap: () {
+                          Navigator.pushNamed(context, '/signup');
+                        },
                       )
                     ],
                   ),

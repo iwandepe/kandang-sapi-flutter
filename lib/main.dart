@@ -5,6 +5,8 @@ import 'package:kadang_sapi_flutter/dictionaries.dart';
 import 'package:kadang_sapi_flutter/gallery.dart';
 import 'package:kadang_sapi_flutter/news.dart';
 import 'package:kadang_sapi_flutter/newsdetail.dart';
+import 'package:kadang_sapi_flutter/signin.dart';
+import 'package:kadang_sapi_flutter/signup.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,7 +21,26 @@ class MyApp extends StatelessWidget {
         primaryColor: Color(0xFF39424B),
         accentColor: Color(0xFF465461),
         buttonColor: Color(0xFFFF893B),
+        textTheme: TextTheme(
+          headline1: TextStyle(
+            fontSize: 36.0,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+          headline4: TextStyle(fontSize: 20.0, color: Colors.white),
+          headline5: TextStyle(fontSize: 18.0, color: Colors.white),
+          headline6: TextStyle(fontSize: 16.0, color: Colors.white),
+          bodyText2: TextStyle(fontSize: 14.0, color: Colors.white),
+        ),
       ),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => NewsPage(),
+        '/gallery': (context) => GalleryPage(),
+        '/dictionary': (context) => DictionaryPage(),
+        '/signin': (context) => SignInPage(),
+        '/signup': (context) => SignUpPage()
+      },
       // home: SignInPage()
       // home: SignUpPage(),
       // home: GalleryPage(),
@@ -27,7 +48,7 @@ class MyApp extends StatelessWidget {
       // home: DictionaryPage(),
       // home: DictionaryDetailPage(),
       // home: NewsDetailPage(),
-      home: NewsPage(),
+      // home: NewsPage(),
       debugShowCheckedModeBanner: false,
     );
   }
