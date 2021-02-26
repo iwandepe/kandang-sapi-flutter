@@ -19,11 +19,10 @@ class GalleryPage extends StatelessWidget {
               child: InkWell(
                 onTap: () {
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => DetailPage(
-                                id: index,
-                              )));
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => DetailPage(id: index)),
+                  );
                 },
                 child: Container(
                   margin: EdgeInsets.all(10),

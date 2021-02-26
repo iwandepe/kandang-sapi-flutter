@@ -3,6 +3,8 @@ import 'package:kadang_sapi_flutter/detail.dart';
 import 'package:kadang_sapi_flutter/dictdetail.dart';
 import 'package:kadang_sapi_flutter/dictionaries.dart';
 import 'package:kadang_sapi_flutter/gallery.dart';
+import 'package:kadang_sapi_flutter/news.dart';
+import 'package:kadang_sapi_flutter/newsdetail.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,8 +24,10 @@ class MyApp extends StatelessWidget {
       // home: SignUpPage(),
       // home: GalleryPage(),
       // home: DetailPage(),
-      home: DictionaryPage(),
+      // home: DictionaryPage(),
       // home: DictionaryDetailPage(),
+      // home: NewsDetailPage(),
+      home: NewsPage(),
       debugShowCheckedModeBanner: false,
     );
   }
