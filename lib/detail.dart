@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:kadang_sapi_flutter/R.dart';
-import 'package:kadang_sapi_flutter/R.dart';
-
 class DetailPage extends StatelessWidget {
-  final int id;
+  final dynamic data;
 
-  DetailPage({this.id});
+  DetailPage({this.data});
 
   @override
   Widget build(BuildContext context) {
@@ -16,11 +13,11 @@ class DetailPage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Image.asset("assets/img/cow/${R.cowList[id]['img']}.jpg"),
+          Image.network(data.imageURL),
           Container(
             margin: EdgeInsets.all(20),
             alignment: Alignment.centerLeft,
-            child: Text(R.cowList[id]['name'],
+            child: Text(data.name,
                 style: TextStyle(
                     fontSize: 28,
                     color: Colors.white,
@@ -28,7 +25,7 @@ class DetailPage extends StatelessWidget {
           ),
           Container(
               margin: EdgeInsets.only(left: 15, right: 15),
-              child: Text(R.cowList[id]['detail'],
+              child: Text(data.detail,
                   textAlign: TextAlign.justify,
                   style: TextStyle(color: Colors.white, fontSize: 18))),
         ],

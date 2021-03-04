@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:kadang_sapi_flutter/R.dart';
-
 class NewsDetailPage extends StatelessWidget {
-  final int id;
+  final dynamic data;
 
-  NewsDetailPage({this.id});
+  NewsDetailPage({this.data});
 
   @override
   Widget build(BuildContext context) {
@@ -19,12 +17,12 @@ class NewsDetailPage extends StatelessWidget {
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            Image.asset('assets/img/news/${id}.jpg'),
+            Image.network(data.imageURL),
             Container(
               padding:
                   EdgeInsets.only(top: 20, bottom: 20, left: 10, right: 10),
               child: Text(
-                R.newsList[id]['title'],
+                data.title,
                 style: TextStyle(
                     color: Colors.white,
                     fontSize: 24,
@@ -34,7 +32,7 @@ class NewsDetailPage extends StatelessWidget {
             Container(
               padding: EdgeInsets.only(left: 10, right: 10),
               child: Text(
-                R.newsList[id]['content'],
+                data.content,
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 16,

@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
           bodyText2: TextStyle(fontSize: 14.0, color: Colors.white),
         ),
       ),
-      initialRoute: '/',
+      initialRoute: '/signin',
       routes: {
         '/': (context) => NewsPage(),
         '/gallery': (context) => GalleryPage(),

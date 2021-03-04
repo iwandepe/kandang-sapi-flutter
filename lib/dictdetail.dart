@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:kadang_sapi_flutter/R.dart';
-
 class DictionaryDetailPage extends StatelessWidget {
-  final int id;
+  final dynamic data;
 
-  DictionaryDetailPage({this.id});
+  DictionaryDetailPage({this.data});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +29,7 @@ class DictionaryDetailPage extends StatelessWidget {
               width: double.infinity,
               alignment: Alignment.centerLeft,
               child: Text(
-                R.livestockTermList[id]['term'],
+                data.term,
                 style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
@@ -51,7 +49,7 @@ class DictionaryDetailPage extends StatelessWidget {
             Container(
               padding: EdgeInsets.all(10),
               child: Text(
-                R.livestockTermList[id]['meaning'],
+                data.meaning,
                 style: TextStyle(color: Colors.white),
               ),
             ),
