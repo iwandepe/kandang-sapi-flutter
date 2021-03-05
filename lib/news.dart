@@ -12,8 +12,10 @@ class NewsPage extends StatefulWidget {
 
 class _NewsPageState extends State<NewsPage> {
   Future<List<Newsdata>> fetchNews() async {
+    print("Async");
     var response =
         await http.get("http://iwandepee.000webhostapp.com/news.php");
+    print("Async22");
 
     if (response.statusCode == 200) {
       final items = jsonDecode(response.body).cast<Map<String, dynamic>>();

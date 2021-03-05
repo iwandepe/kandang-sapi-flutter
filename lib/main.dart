@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kadang_sapi_flutter/detail.dart';
-import 'package:kadang_sapi_flutter/dictdetail.dart';
 import 'package:kadang_sapi_flutter/dictionaries.dart';
 import 'package:kadang_sapi_flutter/gallery.dart';
 import 'package:kadang_sapi_flutter/news.dart';
-import 'package:kadang_sapi_flutter/newsdetail.dart';
 import 'package:kadang_sapi_flutter/signin.dart';
 import 'package:kadang_sapi_flutter/signup.dart';
 
@@ -33,7 +30,7 @@ class MyApp extends StatelessWidget {
           bodyText2: TextStyle(fontSize: 14.0, color: Colors.white),
         ),
       ),
-      initialRoute: '/signin',
+      initialRoute: '/',
       routes: {
         '/': (context) => NewsPage(),
         '/gallery': (context) => GalleryPage(),

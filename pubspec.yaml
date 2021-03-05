@@ -30,12 +30,12 @@ dependencies:
   material_floating_search_bar: ^0.2.6
   http: ^0.12.2
   flutter_typeahead: ^2.0.0
-#   flutter_launcher_icons: "^0.8.0"
+  flutter_launcher_icons: "^0.8.0"
 
-# flutter_icons:
-#   android: "launcher_icon"
-#   ios: true
-#   image_path: "assets/logo/logo_transparent.png"
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/img/logo/logo.png"
 
 dev_dependencies:
   flutter_test:
